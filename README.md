@@ -15,4 +15,4 @@ For user interactions: **filtering** the data and filling the forms is done usin
 ## Have a look
 
 
-[![The prototype](rikaz.png)](https://www.figma.com/proto/IeBFPegDJoYORSqJFwHXRKgc/Untitled?scaling=contain&node-id=4%3A2)
+[![The prototype](https://user-images.githubusercontent.com/16361375/36074262-59a3d660-0f46-11e8-9f57-43978cb4ba3c.png)](https://www.figma.com/proto/IeBFPegDJoYORSqJFwHXRKgc/Untitled?scaling=contain&node-id=4%3A2)
