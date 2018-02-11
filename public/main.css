@@ -1,0 +1,18 @@
+.div-introduction{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  height: 100%;
+  background-image: url("./assets/introductionBackground.png");
+}
+.container{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+html {
+    height: 100%;
+}
