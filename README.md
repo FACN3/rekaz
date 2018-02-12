@@ -16,9 +16,9 @@ For user interactions: **filtering** the data and filling the forms is done usin
 
 1. The user visit the website goes to the landing page.
 
-1. The user select which topic to view e.g Health Status.
+1. The user selects which topic to view e.g Health Status.
 
-1. The user select which sub-topic to visualize it's data e.g. smoking.
+1. The user selects which sub-topic to visualize it's data e.g. smoking.
 
 1. The user now looks to the charts, and once the filters is changed by the user the charts will updated accordingly.
 
