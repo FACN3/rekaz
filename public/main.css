@@ -21,23 +21,62 @@ html {
 }
 
 .main-buttons {
-  background-color: red;
+  animation-name: shrink;
+  animation-duration: 0.5s;
+  background-color: #ace5da;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   border-radius: 50%;
   padding: 3%;
-  width: 10%;
-  height: auto;
+  width: 10rem;
+  justify-content: space-around;
+  height: 10rem;
+  margin: 20px;
+}
+
+.main-buttons:hover {
+  cursor: pointer;
+  animation-name: expand;
+  animation-duration: 0.5s;
+  width: 12rem;
+  height: 12rem;
+}
+
+.main-buttons span {
+  font-size: 26px;
 }
 
 .iconImg {
-  width: 60%;
+  width: 50%;
   height: auto;
 }
 
 .arrow {
-  width: 20%;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Animation*/
+
+@keyframes expand {
+  from {
+    width: 10rem;
+    height: 10rem;
+  }
+  to {
+    width: 12rem;
+    height: 12rem;
+  }
+}
+@keyframes shrink {
+  from {
+    width: 12rem;
+    height: 12rem;
+  }
+  to {
+    width: 10rem;
+    height: 10rem;
+  }
 }

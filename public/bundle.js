@@ -8186,7 +8186,7 @@ var LandingPage = function LandingPage() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.'
       )
     ),
-    _react2.default.createElement(_Main_button2.default, { title: 'Smoking', img: '../../public/assets/smoke-512.png' })
+    _react2.default.createElement(_Main_button2.default, { title: 'Smoking', img: '../../public/assets/smoke-512.ico' })
   );
 };
 
