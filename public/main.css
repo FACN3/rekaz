@@ -1,14 +1,15 @@
-.div-introduction {
+.first-page-introduction-div {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  padding: 30px;
-  height: 100%;
+  padding: 3rem;
+  height: 25rem;
+  font-size: 1rem;
   background-image: url("./assets/introductionBackground.png");
 }
 
-.container {
+.top-level-container {
   height: 100%;
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import MainButton from './MainButton';
 class ListButtons extends React.Component {
-  Constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       list: 0,
