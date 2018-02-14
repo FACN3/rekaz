@@ -5,7 +5,7 @@ const gender = ['Female','Male','Both'];
 
 class FirstChart extends Component {
   constructor(props) {
-    super(props);]
+    super(props);
   }
   render() {
     return (
