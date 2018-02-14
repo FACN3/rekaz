@@ -1,35 +1,19 @@
-.header-image {
-  width: 80%;
-  height: auto;
-  margin: auto;
-}
-
-.first-page-introduction-div {
+.div-introduction {
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  padding: 3rem;
-  height: 25rem;
-  font-size: 1rem;
+  padding: 30px;
+  height: 100%;
   background-image: url("./assets/introductionBackground.png");
 }
 
-.top-level-container {
+.container {
   height: 100%;
 }
 
-.main-buttons-container {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  margin: 5rem 2rem;
-}
-
 body {
-  margin: 0;
-  text-align: center;
+  height: 100%;
 }
 
 html {
@@ -50,7 +34,6 @@ html {
   justify-content: space-around;
   height: 10rem;
   margin: 20px;
-  white-space: pre-line;
 }
 
 .main-buttons:hover {
@@ -62,7 +45,7 @@ html {
 }
 
 .main-buttons span {
-  font-size: 2rem;
+  font-size: 26px;
 }
 
 .iconImg {
@@ -73,207 +56,6 @@ html {
 .arrow {
   width: 2rem;
   height: 2rem;
-}
-
-.main-buttons-section-header {
-  flex-direction: row;
-}
-
-.main-buttons-section-header h2 {
-  align-self: center;
-  justify-content: center;
-  font-size: 2.3rem;
-}
-
-.main-buttons-section-header img {
-  position: absolute;
-  left: 1rem;
-  width: 5rem;
-}
-
-.main-buttons-section-header img:hover {
-  cursor: pointer;
-}
-
-/* First Chart*/
-
-.First-chart-holder {
-  background-color: #9BE9D9;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-
-.First-chart-filters-holder {
-  width: 92%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-}
-
-.First-chart-filter {
-  background: #FFF;
-  color: #333;
-  width: 30%;
-  height: 3rem;
-  border: 0;
-  font-size: 18px;
-  border-radius: 4px;
-  font-family: 'Raleway', sans-serif;
-  -webkit-transition: .6s;
-  transition: .6s;
-  overflow: hidden;
-}
-
-.First-chart-filter:focus {
-  outline: 0;
-}
-
-.First-chart-filter:before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: .5;
-  -webkit-filter: blur(30px);
-  filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
-.First-chart-filter:after {
-  content: '';
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  left: 30px;
-  top: 0;
-  opacity: 0;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
-.First-chart-filter:hover {
-  background: #333;
-  color: #FFF;
-  cursor: pointer;
-  box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
-}
-
-.First-chart-filter span {}
-
-.First-chart-figure-container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 53%;
-  margin: 0.5rem auto;
-}
-
-.First-chart-container {
-  display: flex;
-  width: 92%;
-  margin: auto;
-  flex-direction: column;
-  margin-bottom: 2rem;
-  margin-left: 0;
-}
-
-.First-chart-data-container {
-  display: flex;
-  width: 100%;
-  margin: auto;
-}
-
-.first-chart-gender-title {
-  width: 78%;
-  align-self: center;
-  word-wrap: break-word;
-  text-align: left;
-}
-
-.first-chart-gender-title h3 {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-}
-
-.first-chart-counters {
-  width: 24%;
-  align-self: center;
-}
-
-/* Flipping Figure*/
-
-.card {
-  width: 20%;
-  height: 3rem;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
-  border-radius: 10px;
-}
-
-.card:hover {
-  cursor: pointer;
-}
-
-.face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 10px;
-}
-
-.front {
-  background-image: url('./assets/person-solid.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-}
-
-.back {
-  overflow: hidden;
-  background-image: url("./assets/smoker.png");
-  z-index: -1;
-  background-repeat: no-repeat;
-  display: block;
-  background-size: contain;
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-  box-sizing: border-box;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-size: 100% 100%;
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-  }
-}
-
-.front, .back {
-  transition: all .5s linear;
-}
-
-.flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
 }
 
 /* Animation*/
@@ -288,7 +70,6 @@ html {
     height: 12rem;
   }
 }
-
 @keyframes shrink {
   from {
     width: 12rem;
@@ -299,33 +80,3 @@ html {
     height: 10rem;
   }
 }
-
-@media only screen and (min-width: 710px) {
-  .First-chart-container {
-    margin-top: 2rem;
-  }
-  .header-image {
-    width: 50%;
-  }
-  .First-chart-filters-holder {
-    width: 53%;
-    margin-right: 24%;
-  }
-  .card {
-    height: 5rem;
-  }
-  .First-chart-figure-container {
-    margin: 1rem auto;
-  }
-  .main-buttons-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-flow: wrap;
-  }
-  .first-page-introduction-div {
-    font-size: 1.3rem;
-  }
-}
-
-/*---------------*/

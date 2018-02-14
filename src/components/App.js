@@ -1,15 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import LandingPage from "./Landing_page";
-import SmokingPage from "./Smoking_page";
-const App = () => (
+const app = () => (
 
   <BrowserRouter>
-    <Switch>
-    <Route exact path='/' component={LandingPage} />
-    <Route path='/smoking' component={SmokingPage} />
-    </Switch>
+    <Route path='/' component={LandingPage} />
   </BrowserRouter>
 
 );
- export default App;
+ export default app;
