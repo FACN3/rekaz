@@ -53,13 +53,6 @@ html {
   white-space: pre-line;
 }
 
-.main-buttons:hover {
-  cursor: pointer;
-  animation-name: expand;
-  animation-duration: 0.5s;
-  width: 12rem;
-  height: 12rem;
-}
 
 .main-buttons span {
   font-size: 2rem;
@@ -123,6 +116,23 @@ html {
   -webkit-transition: .6s;
   transition: .6s;
   overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: center;
+  align-items: center;
+}
+
+.First-chart-filter option {
+  display: list-item;
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  color: #838e95;
+  padding: 0.5em 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .First-chart-filter:focus {
@@ -301,6 +311,13 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+  .main-buttons:hover {
+    cursor: pointer;
+    animation-name: expand;
+    animation-duration: 0.5s;
+    width: 12rem;
+    height: 12rem;
+  }
   .First-chart-container {
     margin-top: 2rem;
   }

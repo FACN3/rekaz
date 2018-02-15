@@ -4,27 +4,39 @@ class Figure extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flipped: ""
+      flipped: "",
+      update:this.props.update
     }
     this.handleFigureClick = this.handleFigureClick.bind(this);
+    let flipped="";
   }
 
   componentDidMount(){
-    if(this.props.id <= this.props.percentage){
-      setTimeout(()=> this.setState({flipped: "flipped"}) , this.props.id * 200)
+    if(this.props.id < this.props.percentage){
+      setTimeout(()=> this.flipped="flipped", this.props.id * 200)
+
+    }
+  }
+  componentDidUpdate(){
+    if(this.props.id < this.props.percentage){
+      setTimeout(()=> this.flipped="flipped", this.props.id * 200)
+
+    }else{
+      setTimeout(()=> this.flipped="" , this.props.id * 200)
 
     }
   }
 
+
   handleFigureClick() {
-    if (this.state.flipped == "flipped") {
-      this.setState({flipped: ""});
+    if (this.flipped == "flipped") {
+    this.flipped="";
     } else {
-      this.setState({flipped: "flipped"});
+      this.flipped="flipped";
     }
   }
   render() {
-    return (<div className={"card clickcard " + this.state.flipped} onClick={this.handleFigureClick}>
+    return (<div className={"card clickcard " + this.props.flipped} onClick={this.handleFigureClick}>
       <div className="front face"></div>
       <div className="back face"></div>
     </div>);
