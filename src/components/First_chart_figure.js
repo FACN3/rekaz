@@ -4,26 +4,20 @@ class Figure extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flipped: "",
-      update:this.props.update
+      flipped: ""
     }
     this.handleFigureClick = this.handleFigureClick.bind(this);
     let flipped="";
   }
 
   componentDidMount(){
-    if(this.props.id < this.props.percentage){
-      setTimeout(()=> this.flipped="flipped", this.props.id * 200)
-
+    if(this.props.flipped!=this.state.flipped){
+      this.setState({flipped:this.props.flipped});
     }
   }
   componentDidUpdate(){
-    if(this.props.id < this.props.percentage){
-      setTimeout(()=> this.flipped="flipped", this.props.id * 200)
-
-    }else{
-      setTimeout(()=> this.flipped="" , this.props.id * 200)
-
+    if(this.props.flipped!=this.state.flipped){
+      this.setState({flipped:this.props.flipped});
     }
   }
 
