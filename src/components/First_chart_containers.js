@@ -5,7 +5,7 @@ import Figure from "./First_chart_figure";
 class ChartHolder extends Component {
   constructor(props){
     super(props);
-    this.state={flipps:["","","","","","","","","",""],data:Math.round(this.props.data/10)}
+    this.state={flipps:["","","","","","","","","","","","","","","","","","","",""],data:Math.round(this.props.data/5)}
   }
   addOne(array){
     let i=array.indexOf("");
@@ -36,8 +36,8 @@ class ChartHolder extends Component {
   componentDidUpdate(){
 
     setTimeout(() => {
-      if(this.state.data!==Math.round(this.props.data/10)){
-        this.setState({data:Math.round(this.props.data/10)});
+      if(this.state.data!==Math.round(this.props.data/5)){
+        this.setState({data:Math.round(this.props.data/5)});
       }
       if(this.counter(this.state.flipps)>this.state.data){
         this.setState({flipps:this.lessOne(this.state.flipps)});
@@ -51,7 +51,10 @@ class ChartHolder extends Component {
 
 
   render(){
-    const firstChart = [0,1,2,3,4,5,6,7,8,9];
+    let firstChart = [] ;
+    for(let i=0;i<20;i++){
+      firstChart.push(i);
+    }
     return (
     <div className="First-chart-container">
       <div className="first-chart-gender-title"><h3>{this.props.gender}</h3></div>
