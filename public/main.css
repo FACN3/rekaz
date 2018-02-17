@@ -81,3 +81,33 @@ html {
     height: 10rem;
   }
 }
+
+
+@media only screen and (min-width: 710px) {
+  .First-chart-container {
+    margin-top: 2rem;
+  }
+  .header-image {
+    width: 50%;
+  }
+  .First-chart-filters-holder {
+    width: 53%;
+    margin-right: 24%;
+  }
+  .card {
+    height: 5rem;
+  }
+  .First-chart-figure-container {
+    margin: 1rem auto;
+  }
+  .main-buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+  .first-page-introduction-div {
+    font-size: 1.3rem;
+  }
+}
+
