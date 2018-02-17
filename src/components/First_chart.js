@@ -12,25 +12,27 @@ class FirstChart extends Component {
       income:"income",
       education:"education",
       data : {
-        default:{default:[9,50,30]},
         age:{
+          age:[9,50,30],
           '18-29':[12,45,29],
           '30-44':[7,60, 33],
           '45-59':[5,55,30],
           '60+':[2,40,20]
         },
         income:{
+          income:[9,50,30],
           'low':[9,43,26],
           'meduim':[10,50,30],
           'high':[12,60,37]
         },
         education:{
+          education: [9,50,30],
           'secondary':[7,62,35],
           'highschool':[5,55,30],
           'bs+':[4,50,27]
         }
       },
-      choosen:['default','default']
+      choosen:['age','age']
     }
     this.handleChange=this.handleChange.bind(this);
   }
