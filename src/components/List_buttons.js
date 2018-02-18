@@ -67,8 +67,8 @@ class ListButtons extends React.Component {
     let  buttonsSectionHeader = "";
     if(this.state.list !== 0){
        buttonsSectionHeader = [
-        <img src="../../public/assets/left-arrow.png" onClick={this.handleBackArrow} alt="go back arrow"/>,
-        <h2>{this.state.lists[0][this.state.list - 1].text}</h2>
+        <img key="goBackArrow" src="../../public/assets/left-arrow.png" onClick={this.handleBackArrow} alt="go back arrow"/>,
+        <h2 key="bottunListHeader">{this.state.lists[0][this.state.list - 1].text}</h2>
       ]
     }else{
        buttonsSectionHeader = <h2>Content</h2>;
