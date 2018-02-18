@@ -53,7 +53,7 @@ class FirstChart extends Component {
     return (<div className="First-chart-holder">
       {
         gender.map((sex, i) => {
-          return <FirstChartContainers gender={sex} data={this.state.data[this.state.choosen[0]][this.state.choosen[1]][i]}/>
+          return <FirstChartContainers key={i} gender={sex} data={this.state.data[this.state.choosen[0]][this.state.choosen[1]][i]}/>
         })
       }
       <div className="First-chart-filters-holder sel sel--black-panther">
