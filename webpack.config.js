@@ -7,8 +7,8 @@ module.exports = {
     path: path.resolve(__dirname),
     filename: "bundle.js"
   },
-  devServer : {
-    historyApiFallback : true
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     loaders: [
