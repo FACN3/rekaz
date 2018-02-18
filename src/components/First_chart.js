@@ -50,7 +50,6 @@ class FirstChart extends Component {
   }
 }
   render() {
-    console.log(this.state.choosen);
     return (<div className="First-chart-holder">
       {
         gender.map((sex, i) => {
