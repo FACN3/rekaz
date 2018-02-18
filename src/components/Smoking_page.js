@@ -1,6 +1,6 @@
 import React from 'react';
 import FirstChart from "./First_chart";
-import ThirdChart from "./Third_chart";
+
 const SmokingPage = () => {
   return (
     <div>
