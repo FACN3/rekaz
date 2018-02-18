@@ -1,6 +1,5 @@
 import React from 'react';
 import FirstChart from "./First_chart";
-import ThirdChart from "./Third_chart";
 const SmokingPage = () => {
   return (
     <div>
@@ -9,7 +8,6 @@ const SmokingPage = () => {
       </div>
       <h1>Welcome to the smoking page</h1>
       <FirstChart />
-
     </div>
   );
 }

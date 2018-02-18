@@ -286,19 +286,6 @@ html {
   transform: rotateY(180deg);
 }
 
-/*Third Chart*/
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis {
-  display: none;
-}
-
-
 /* Animation*/
 
 @keyframes expand {
