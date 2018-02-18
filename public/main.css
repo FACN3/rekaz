@@ -223,8 +223,8 @@ html {
 /* Flipping Figure*/
 
 .card {
-  width: 20%;
-  height: 3rem;
+  width: 10%;
+  height: 2rem;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: all .5s linear;
@@ -285,6 +285,19 @@ html {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
+
+/*Third Chart*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis {
+  display: none;
+}
+
 
 /* Animation*/
 
