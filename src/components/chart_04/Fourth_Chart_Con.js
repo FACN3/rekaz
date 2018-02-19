@@ -6,11 +6,7 @@ class FourthChartCon extends React.Component {
 
     this.state = {
       index: 0,
-      data: [
-        [45.8, 10, 80, 70, 30],
-        [45.8, 36.1, 65.8, 46.5, 84.5],
-        [67.4, 62.7, 48.8, 71.8, 95.4]
-      ]
+      data: this.props.data.values
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -38,7 +34,11 @@ class FourthChartCon extends React.Component {
   render() {
     return (
       <div className="First-chart-holder">
-        <Chart04 data={this.state.data[this.state.index]} />
+        <Chart04
+          name={this.props.name}
+          values={this.props.data}
+          data={this.state.data[this.state.index]}
+        />
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
             id="age"

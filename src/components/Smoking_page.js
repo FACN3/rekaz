@@ -1,7 +1,8 @@
 import React from "react";
 import FirstChart from "./First_chart";
 import FourthChartCon from "./chart_04/Fourth_Chart_Con";
-
+import chart05Data from "./chart_05/data";
+import chart04Data from "./chart_04/data";
 const SmokingPage = () => {
   return (
     <div>
@@ -16,7 +17,9 @@ const SmokingPage = () => {
       <div className="charts">
         <FirstChart />
         <h2>insert introduction here</h2>
-        <FourthChartCon />
+        <FourthChartCon name="fourth" data={chart04Data} />
+        <h2>insert introduction here</h2>
+        <FourthChartCon name="fith" data={chart05Data} />
       </div>
     </div>
   );
