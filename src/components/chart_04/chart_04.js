@@ -6,7 +6,7 @@ class Chart04 extends Component {
     super(props);
     (this.width = window.innerWidth),
       (this.height = 0.7 * this.width),
-      (this.radius = Math.min(this.width, this.height) / 3.5);
+      (this.radius = Math.min(this.width, this.height) / 2.8);
     this.pie = d3 //.layout
       .pie()
       .sort(null)
@@ -21,17 +21,11 @@ class Chart04 extends Component {
 
     this.outerArc = d3
       .arc()
-      .innerRadius(this.radius * 0.9)
-      .outerRadius(this.radius * 0.9);
-    this.labels = [
-      "unknown where to sick advice",
-      "lack of health solutions",
-      "peer pressure",
-      "lack of support programs",
-      "lack of will"
-    ];
+      .innerRadius(this.radius * 0.8)
+      .outerRadius(this.radius * 0.8);
+    this.labels = this.props.values.labels;
 
-    this.colors = ["#005073", "#107dac", "#189ad3", "#1ebbd7", "#71c7ec"];
+    this.colors = this.props.values.colors;
   }
   compileDataSet(labels, data, colors) {
     return labels.map((label, i) => {
@@ -40,7 +34,7 @@ class Chart04 extends Component {
   }
   componentDidMount() {
     const svg = d3
-      .select(".chartC")
+      .select("." + this.props.name)
       .attr("width", this.width)
       .attr("height", this.height)
       .append("g");
@@ -51,7 +45,7 @@ class Chart04 extends Component {
 
     svg.attr(
       "transform",
-      "translate(" + this.width / 2 + "," + this.height / 3 + ")"
+      "translate(" + this.width / 2 + "," + this.height / 2.6 + ")"
     );
 
     const format = d3.format(".1f");
@@ -99,7 +93,7 @@ class Chart04 extends Component {
       this.props.data,
       this.colors
     );
-    const svg = d3.select(".chartC");
+    const svg = d3.select("." + this.props.name);
     change(
       dataSet1,
       false,
@@ -114,7 +108,8 @@ class Chart04 extends Component {
   }
 
   render() {
-    return <svg className="chartC" />;
+    console.log(this.props.name);
+    return <svg className={this.props.name} />;
   }
 }
 
