@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FirstChartContainers from "./First_chart_containers";
 
-const gender = ["Female", "Male", "Both"];
+const gender = ["female", "male", "both"];
 
 class FirstChart extends Component {
   constructor(props) {
@@ -69,8 +69,9 @@ class FirstChart extends Component {
         {gender.map((sex, i) => {
           return (
             <FirstChartContainers
+              languages={this.props.languages}
               index={i}
-              gender={sex}
+              gender={this.props.languages[sex]}
               data={
                 this.state.data[this.state.choosen[0]][this.state.choosen[1]][i]
               }
@@ -84,7 +85,7 @@ class FirstChart extends Component {
             onChange={this.handleChange}
             value={this.state.age}
           >
-            <option value="age">Age</option>
+            <option value="age">{this.props.languages.age}</option>
             <option value="18-29">18-29</option>
             <option value="30-44">30-44</option>
             <option value="45-59">45-59</option>
@@ -96,10 +97,10 @@ class FirstChart extends Component {
             onChange={this.handleChange}
             value={this.state.income}
           >
-            <option value="income">Income</option>
-            <option value="low">Low</option>
-            <option value="meduim">Medium</option>
-            <option value="high">High</option>
+            <option value="income">{this.props.languages.income}</option>
+            <option value="low">{this.props.languages.low}</option>
+            <option value="meduim">{this.props.languages.meduim}</option>
+            <option value="high">{this.props.languages.high}</option>
           </select>
           <select
             id="education"
@@ -107,10 +108,10 @@ class FirstChart extends Component {
             onChange={this.handleChange}
             value={this.state.education}
           >
-            <option value="education">Education</option>
-            <option value="secondary">Secondary</option>
-            <option value="highschool">Highschool</option>
-            <option value="bs+">BS+</option>
+            <option value="education">{this.props.languages.education}</option>
+            <option value="secondary">{this.props.languages.secondary}</option>
+            <option value="highschool">{this.props.languages.highschool}</option>
+            <option value="bs+">{this.props.languages.bs}</option>
           </select>
         </div>
       </div>
