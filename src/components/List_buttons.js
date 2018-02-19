@@ -11,26 +11,26 @@ class ListButtons extends React.Component {
           {
             text: "Health Status",
             link: 1,
-            image: ""
+            image: "../../public/assets/stethoscope.png"
           }, {
-            text: "Health behavior",
+            text: "Health Behavior",
             link: 2,
-            image: ""
+            image: "../../public/assets/heart.png"
           }, {
-            text: "Health Letarecy",
+            text: "Health Literacy",
             link: 3,
-            image: ""
+            image: "../../public/assets/Litracy.png"
           }, {
             text: "Health Service",
             link: 4,
-            image: ""
+            image: "../../public/assets/charity.png"
           }
         ],
         [
           {
             text: "Perodic Checkups",
             link: "perodic",
-            image: ""
+            image: "../../public/assets/medical-checkup.png"
           }, {
             text: "Smoking",
             link: "smoking",
@@ -38,11 +38,11 @@ class ListButtons extends React.Component {
           }, {
             text: "Physical Activity",
             link: "activity",
-            image: ""
+            image: "../../public/assets/physical-activity.png"
           }, {
             text: "Food and Nutrition",
             link: "food",
-            image: ""
+            image: "../../public/assets/nutrition.png"
           }
         ]
       ],
