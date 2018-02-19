@@ -30,7 +30,7 @@ class ListButtons extends React.Component {
           {
             text: "Perodic Checkups",
             link: "perodic",
-            image: ""
+            image: "../../public/assets/medical-checkup.png"
           }, {
             text: "Smoking",
             link: "smoking",
@@ -38,11 +38,11 @@ class ListButtons extends React.Component {
           }, {
             text: "Physical Activity",
             link: "activity",
-            image: ""
+            image: "../../public/assets/physical-activity.png"
           }, {
             text: "Food and Nutrition",
             link: "food",
-            image: ""
+            image: "../../public/assets/nutrition.png"
           }
         ]
       ],
