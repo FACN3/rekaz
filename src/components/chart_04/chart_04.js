@@ -7,6 +7,9 @@ class Chart04 extends Component {
     (this.width = window.innerWidth),
       (this.height = 0.7 * this.width),
       (this.radius = Math.min(this.width, this.height) / 3.5);
+      if(this.width>1000){
+        this.width = this.width * 0.75;
+      }
     this.pie = d3 //.layout
       .pie()
       .sort(null)

@@ -18,15 +18,18 @@ html {
   height: auto;
   margin: auto;
 }
+
 .chartC {
   width: 100%;
   height: 100%;
 }
+
 .charts {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
+
 .first-page-introduction-div {
   display: flex;
   text-align: center;
@@ -113,6 +116,7 @@ html {
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  width: 75%;
 }
 
 .First-chart-filters-holder {
@@ -196,8 +200,7 @@ html {
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
 
-.First-chart-filter span {
-}
+.First-chart-filter span {}
 
 .First-chart-figure-container {
   display: flex;
@@ -296,8 +299,7 @@ html {
   }
 }
 
-.front,
-.back {
+.front, .back {
   transition: all 0.5s linear;
 }
 
@@ -331,6 +333,13 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+
+  .Achart-holder {
+    background-color: #9be9d9;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
   .main-buttons:hover {
     cursor: pointer;
     animation-name: expand;
@@ -383,10 +392,12 @@ html {
   }
 }
 
+
 /*path.slice {
   stroke-width: 2px;
 }
 */
+
 polyline {
   opacity: 0.3;
   stroke: black;
