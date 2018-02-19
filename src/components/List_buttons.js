@@ -71,7 +71,7 @@ class ListButtons extends React.Component {
         <h2 key="bottunListHeader">{this.state.lists[0][this.state.list - 1].text}</h2>
       ]
     }else{
-       buttonsSectionHeader = <h2>Content</h2>;
+       buttonsSectionHeader = <h2>{this.props.languages.content}</h2>;
     }
     if(this.state.redirect!==""){
       return <Redirect to={this.state.redirect} />;
