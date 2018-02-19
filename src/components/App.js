@@ -15,7 +15,6 @@ class App extends React.Component {
 
    changeLanguage(e){
      this.setState({language: e.target.value==="ar"?"ar":"en"})
-     console.log(this.state.language);
 
    }
 

@@ -73,7 +73,7 @@ class FourthChartCon extends React.Component {
             <option value="secondary">{this.props.languages.secondary}</option>
             <option value="highschool">{this.props.languages.highschool}</option>
             <option value="bs+">{this.props.languages.bs}</option>
-          </select>
+            </select>
         </div>
       </div>
     );
