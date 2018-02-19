@@ -3,7 +3,15 @@
   height: auto;
   margin: auto;
 }
-
+.chartC {
+  width: 100%;
+  height: 100%;
+}
+.charts {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 .first-page-introduction-div {
   display: flex;
   text-align: center;
@@ -53,7 +61,6 @@ html {
   white-space: pre-line;
 }
 
-
 .main-buttons span {
   font-size: 2rem;
 }
@@ -91,7 +98,7 @@ html {
 /* First Chart*/
 
 .First-chart-holder {
-  background-color: #9BE9D9;
+  background-color: #9be9d9;
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
@@ -105,16 +112,16 @@ html {
 }
 
 .First-chart-filter {
-  background: #FFF;
+  background: #fff;
   color: #333;
   width: 30%;
   height: 3rem;
   border: 0;
   font-size: 18px;
   border-radius: 4px;
-  font-family: 'Raleway', sans-serif;
-  -webkit-transition: .6s;
-  transition: .6s;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   overflow: hidden;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -125,7 +132,7 @@ html {
 
 .First-chart-filter option {
   display: list-item;
-  font-family: 'Quicksand';
+  font-family: "Quicksand";
   font-size: 1.5em;
   color: #838e95;
   padding: 0.5em 1em;
@@ -140,7 +147,7 @@ html {
 }
 
 .First-chart-filter:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.5);
@@ -148,7 +155,7 @@ html {
   height: 100%;
   left: 0;
   top: 0;
-  opacity: .5;
+  opacity: 0.5;
   -webkit-filter: blur(30px);
   filter: blur(30px);
   -webkit-transform: translateX(-100px) skewX(-15deg);
@@ -156,7 +163,7 @@ html {
 }
 
 .First-chart-filter:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   background: rgba(255, 255, 255, 0.2);
@@ -173,12 +180,13 @@ html {
 
 .First-chart-filter:hover {
   background: #333;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
 
-.First-chart-filter span {}
+.First-chart-filter span {
+}
 
 .First-chart-figure-container {
   display: flex;
@@ -211,7 +219,7 @@ html {
 
 .first-chart-gender-title h3 {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
 
@@ -227,8 +235,8 @@ html {
   height: 2rem;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   border-radius: 10px;
 }
 
@@ -246,7 +254,7 @@ html {
 }
 
 .front {
-  background-image: url('./assets/person-solid.png');
+  background-image: url("./assets/person-solid.png");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -277,8 +285,9 @@ html {
   }
 }
 
-.front, .back {
-  transition: all .5s linear;
+.front,
+.back {
+  transition: all 0.5s linear;
 }
 
 .flipped {
@@ -343,4 +352,15 @@ html {
   .first-page-introduction-div {
     font-size: 1.3rem;
   }
+}
+
+/*path.slice {
+  stroke-width: 2px;
+}
+*/
+polyline {
+  opacity: 0.3;
+  stroke: black;
+  stroke-width: 2px;
+  fill: none;
 }

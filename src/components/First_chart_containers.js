@@ -88,8 +88,9 @@ class ChartHolder extends Component {
               return <Figure key={id} flipped={this.state.flipps[i]} id={id} />;
             })}
           </div>
-          <div className="first-chart-counters" />
-          <Counter value={this.props.data} position={this.props.index} />
+          <div className="first-chart-counters">
+            <Counter value={this.props.data} position={this.props.index} />
+          </div>
         </div>
       </div>
     );
