@@ -1,3 +1,18 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+/*first page css*/
+
+.header {
+  padding: 2rem 0;
+}
+
 .header-image {
   width: 80%;
   height: auto;
@@ -9,10 +24,11 @@
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  padding: 3rem;
-  height: 25rem;
-  font-size: 1rem;
+  padding: 2rem 3rem;
+  height: 20rem;
+  font-size: 0.9rem;
   background-image: url("./assets/introductionBackground.png");
+  color: #050b00;
 }
 
 .top-level-container {
@@ -24,16 +40,7 @@
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  margin: 5rem 2rem;
-}
-
-body {
-  margin: 0;
-  text-align: center;
-}
-
-html {
-  height: 100%;
+  margin: 1rem 2rem;
 }
 
 .main-buttons {
@@ -45,7 +52,7 @@ html {
   text-align: center;
   align-items: center;
   border-radius: 50%;
-  padding: 3%;
+  padding: 6%;
   width: 10rem;
   justify-content: space-around;
   height: 10rem;
@@ -53,14 +60,13 @@ html {
   white-space: pre-line;
 }
 
-
 .main-buttons span {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .iconImg {
-  width: 50%;
-  height: auto;
+  width: 60%;
+  height: 60%;
 }
 
 .arrow {
@@ -77,7 +83,7 @@ html {
   justify-content: center;
   font-size: 2.3rem;
 }
-
+ /*rgba(250, 229, 150, 0.5);*/
 .main-buttons-section-header img {
   position: absolute;
   left: 1rem;
@@ -317,12 +323,13 @@ html {
     animation-duration: 0.5s;
     width: 12rem;
     height: 12rem;
+
   }
   .First-chart-container {
     margin-top: 2rem;
   }
   .header-image {
-    width: 50%;
+    width: 40%;
   }
   .First-chart-filters-holder {
     width: 53%;
@@ -342,5 +349,8 @@ html {
   }
   .first-page-introduction-div {
     font-size: 1.3rem;
+  }
+  .main-buttons-container {
+    margin: 3rem 2rem;
   }
 }

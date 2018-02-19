@@ -15,7 +15,7 @@ class MainButton extends Component {
   render() {
 
     return (<div className={this.state.style} onClick={this.props.onButtonClick} >
-      <img className="iconImg" src={this.props.img} alt={this.props.title + "icons"}/> {
+      <img className="iconImg" src={this.props.img} alt={this.props.title + "icon"}/> {
         this.props.title.split(" ").map((text, i) => {
           return <span key={i}>{text}</span>
         })

@@ -11,19 +11,19 @@ class ListButtons extends React.Component {
           {
             text: "Health Status",
             link: 1,
-            image: ""
+            image: "../../public/assets/stethoscope.png"
           }, {
-            text: "Health behavior",
+            text: "Health Behavior",
             link: 2,
-            image: ""
+            image: "../../public/assets/heart.png"
           }, {
-            text: "Health Letarecy",
+            text: "Health Literacy",
             link: 3,
-            image: ""
+            image: "../../public/assets/Litracy.png"
           }, {
             text: "Health Service",
             link: 4,
-            image: ""
+            image: "../../public/assets/charity.png"
           }
         ],
         [
