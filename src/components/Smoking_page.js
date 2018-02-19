@@ -13,13 +13,23 @@ const SmokingPage = () => {
           alt="Galille society logo"
         />
       </div>
-      <h1>Welcome to the smoking page</h1>
+      <select
+        id="age"
+        className="First-chart-filter"
+        onChange={ props.changeLanguage }
+        value={props.chosen}
+      >
+        <option value="en"> English</option>
+        <option value="ar">العربية </option>
+      </select>
+
+      <h1>{props.languages.somkingTitle}</h1>
       <div className="charts">
         <FirstChart />
-        <h2>insert introduction here</h2>
-        <FourthChartCon name="fourth" data={chart04Data} />
-        <h2>insert introduction here</h2>
-        <FourthChartCon name="fith" data={chart05Data} />
+        <h2>{props.languages.chartDefault}</h2>
+        <FourthChartCon languages={props.languages} name="fourth" data={chart04Data} />
+        <h2>{props.languages.chartDefault}</h2>
+        <FourthChartCon languages={props.languages} name="fith" data={chart05Data} />
       </div>
     </div>
   );

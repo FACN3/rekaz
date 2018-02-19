@@ -46,7 +46,7 @@ class FourthChartCon extends React.Component {
             onChange={this.handleChange}
             value={this.state.age}
           >
-            <option value="age">Age</option>
+            <option value="age">{this.props.languages.age}</option>
             <option value="18-29">18-29</option>
             <option value="30-44">30-44</option>
             <option value="45-59">45-59</option>
@@ -58,10 +58,10 @@ class FourthChartCon extends React.Component {
             onChange={this.handleChange}
             value={this.state.income}
           >
-            <option value="income">Income</option>
-            <option value="low">Low</option>
-            <option value="meduim">Medium</option>
-            <option value="high">High</option>
+            <option value="income">{this.props.languages.income}</option>
+            <option value="low">{this.props.languages.low}</option>
+            <option value="meduim">{this.props.languages.meduim}</option>
+            <option value="high">{this.props.languages.high}</option>
           </select>
           <select
             id="education"
@@ -69,10 +69,10 @@ class FourthChartCon extends React.Component {
             onChange={this.handleChange}
             value={this.state.education}
           >
-            <option value="education">Education</option>
-            <option value="secondary">Secondary</option>
-            <option value="highschool">Highschool</option>
-            <option value="bs+">BS+</option>
+            <option value="education">{this.props.languages.education}</option>
+            <option value="secondary">{this.props.languages.secondary}</option>
+            <option value="highschool">{this.props.languages.highschool}</option>
+            <option value="bs+">{this.props.languages.bs}</option>
           </select>
         </div>
       </div>
