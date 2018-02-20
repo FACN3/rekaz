@@ -90,6 +90,8 @@ class Chart04 extends Component {
   }
 
   componentDidUpdate() {
+    this.labels = this.props.values.labels;
+
     //const dataSet1 = compileDataSet(labels, this.props.data, colors);
     //change(dataSet1, false);
     const dataSet1 = this.compileDataSet(
@@ -112,7 +114,6 @@ class Chart04 extends Component {
   }
 
   render() {
-    console.log(this.props.name);
     return <svg className={this.props.name} />;
   }
 }

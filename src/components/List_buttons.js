@@ -4,43 +4,36 @@ import MainButton from './Main_button';
 class ListButtons extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       list: 0,
       lists: [
         [
           {
-            text: "Health Status",
             link: 1,
             image: "../../public/assets/stethoscope.png"
           }, {
-            text: "Health Behavior",
             link: 2,
             image: "../../public/assets/heart.png"
           }, {
-            text: "Health Literacy",
             link: 3,
             image: "../../public/assets/Litracy.png"
           }, {
-            text: "Health Service",
             link: 4,
             image: "../../public/assets/charity.png"
           }
         ],
         [
           {
-            text: "Perodic Checkups",
             link: "perodic",
             image: "../../public/assets/medical-checkup.png"
           }, {
-            text: "Smoking",
             link: "smoking",
             image: "../../public/assets/smoke-512.ico"
           }, {
-            text: "Physical Activity",
             link: "activity",
             image: "../../public/assets/physical-activity.png"
           }, {
-            text: "Food and Nutrition",
             link: "food",
             image: "../../public/assets/nutrition.png"
           }
@@ -68,10 +61,10 @@ class ListButtons extends React.Component {
     if(this.state.list !== 0){
        buttonsSectionHeader = [
         <img key="goBackArrow" src="../../public/assets/left-arrow.png" onClick={this.handleBackArrow} alt="go back arrow"/>,
-        <h2 key="bottunListHeader">{this.state.lists[0][this.state.list - 1].text}</h2>
+        <h2 key="bottunListHeader">{this.props.languages.ButtonsContent[0]}</h2>
       ]
     }else{
-       buttonsSectionHeader = <h2>Content</h2>;
+       buttonsSectionHeader = <h2>{this.props.languages.content}</h2>;
     }
     if(this.state.redirect!==""){
       return <Redirect to={this.state.redirect} />;
@@ -83,7 +76,7 @@ class ListButtons extends React.Component {
         </div>
         <div className="main-buttons-container">
           {this.state.lists[this.state.list].map((obj,i)=>{
-            return <MainButton key={i} title={obj.text}  img={obj.image} obj={obj} link={obj.link} onButtonClick={()=>{this.handleClick(obj)}}></MainButton>
+            return <MainButton key={i} title={this.state.list===0?this.props.languages.ButtonsContent[i]:this.props.languages.ButtonStatus[i]}  img={obj.image} obj={obj} link={obj.link} onButtonClick={()=>{this.handleClick(obj)}}></MainButton>
           })}
         </div>
     </div>
