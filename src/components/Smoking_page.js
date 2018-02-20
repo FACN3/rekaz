@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from './Navbar';
+import Footer from './Footer';
 import FirstChart from "./First_chart";
 import FourthChartCon from "./chart_04/Fourth_Chart_Con";
 import chart05Data from "./chart_05/data";
@@ -33,6 +34,7 @@ const SmokingPage = (props) => {
           }}/>
       </div>
     </div>
+    <Footer />
   </div>);
 };
 //chart04Data.values,chart04Data.colors,labels:this.props.languages.labels4

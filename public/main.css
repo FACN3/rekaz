@@ -19,17 +19,17 @@ html {
   margin: auto;
 }
 
-.navbar{
+.navbar {
   margin: 0;
   width: auto;
-  top:0;
-  background-color: #173e43 ;
+  top: 0;
+  background-color: #173e43;
   padding: 0.5rem;
   display: flex;
   justify-content: flex-end;
 }
 
-.navbar-only-input{
+.navbar-only-input {
   background-color: #173e43;
   border: none;
   color: #fff;
@@ -37,7 +37,28 @@ html {
   padding: 0.3rem 0.5rem;
   font-size: 1rem;
 }
-.navbar-only-input option{
+
+.footer {
+  width: auto;
+  height: 7rem;
+  background-image: url("./assets/footer-background.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+.footer_credit {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer_credit a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.3rem;
 }
 
 .chartC {
@@ -213,12 +234,14 @@ html {
   width: 100%;
   margin: auto;
 }
+
 .First-chart-data-container-ar {
   display: flex;
   width: 100%;
   margin: auto;
   flex-direction: row-reverse;
 }
+
 .first-chart-gender-title {
   width: 78%;
   align-self: center;
@@ -231,17 +254,20 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
-.first-chart-gender-title-ar{
+
+.first-chart-gender-title-ar {
   width: 78%;
   align-self: center;
   word-wrap: break-word;
   text-align: right;
 }
+
 .first-chart-gender-title-ar h3 {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
+
 .first-chart-counters {
   width: 24%;
   align-self: center;
@@ -338,12 +364,18 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
-
   .Achart-holder {
     background-color: rgba(221, 223, 212, 0.3);
     display: flex;
     justify-content: center;
     padding: 1rem 0;
+  }
+  .footer {
+    height: 10rem;
+    padding-bottom: 3rem;
+  }
+  .footer_credit a {
+    margin: 0 0.5rem;
   }
   .main-buttons:hover {
     cursor: pointer;
@@ -356,7 +388,6 @@ html {
     width: 8rem;
     height: 8rem;
   }
-
   .header-image {
     width: 40%;
   }

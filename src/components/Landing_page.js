@@ -1,6 +1,7 @@
 import React from 'react';
 import ListButtons from './List_buttons';
 import Navbar from './Navbar';
+import Footer from './Footer';
 const LandingPage = (props) => {
   return (<div className="top-level-container">
     <Navbar changeLanguage={props.changeLanguage} />
@@ -12,6 +13,7 @@ const LandingPage = (props) => {
       <h2>{props.languages.description}</h2>
     </div>
     <ListButtons languages={props.languages}/>
+    <Footer />
   </div>);
 }
 
