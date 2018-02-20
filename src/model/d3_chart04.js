@@ -49,7 +49,7 @@ const change = (data, init, svg, pie, arc, outerArc, width, height, radius) => {
   text
     .enter()
     .append("text")
-    .attr("font-size", "0.3em")
+    .attr("font-size", "0.8em")
     .attr("dy", ".35em")
     .text(function(d) {
       return `${d.data.label} (${format(d.data.value)})`;

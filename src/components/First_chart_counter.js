@@ -40,7 +40,7 @@ class Counter extends Component {
       .attr("r", radius)
       .attr("cx", 0)
       .attr("cy", 0)
-      .attr("fill", "#dddfd4");
+      .attr("fill", "#fae596");
 
     svg
       .selectAll("g")
