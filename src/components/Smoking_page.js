@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from './Navbar';
 import FirstChart from "./First_chart";
 import FourthChartCon from "./chart_04/Fourth_Chart_Con";
 import chart05Data from "./chart_05/data";
@@ -6,15 +7,10 @@ import chart04Data from "./chart_04/data";
 
 const SmokingPage = (props) => {
   return (<div>
+    <Navbar changeLanguage={props.changeLanguage} />
     <div className="header">
       <img className="header-image" src="public/assets/logo.png" alt="Galille society logo"/>
     </div>
-    <select id="age" className="First-chart-filter" onChange={props.changeLanguage} value={props.chosen}>
-      <option value="en">
-        English</option>
-      <option value="ar">العربية
-      </option>
-    </select>
     <h1>{props.languages.somkingTitle}</h1>
     <div className="charts">
       <div className="Achart-holder">
