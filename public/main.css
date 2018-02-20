@@ -18,15 +18,60 @@ html {
   height: auto;
   margin: auto;
 }
+
+.navbar {
+  margin: 0;
+  width: auto;
+  top: 0;
+  background-color: #173e43;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-only-input {
+  background-color: #173e43;
+  border: none;
+  color: #fff;
+  width: max-content;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+}
+
+.footer {
+  width: auto;
+  height: 7rem;
+  background-image: url("./assets/footer-background.png");
+  background-repeat: repeat-x;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+}
+
+.footer_credit {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer_credit a {
+  text-decoration: none;
+  color: #fff;
+  margin: 0 0.3rem;
+}
+
 .chartC {
   width: 100%;
   height: 100%;
 }
+
 .charts {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
+
 .first-page-introduction-div {
   display: flex;
   text-align: center;
@@ -41,6 +86,7 @@ html {
 
 .top-level-container {
   height: 100%;
+  width: 100%;
 }
 
 .main-buttons-container {
@@ -109,10 +155,11 @@ html {
 /* First Chart*/
 
 .First-chart-holder {
-  background-color: #9be9d9;
+  background-color: rgba(221, 223, 212, 0.3);
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  width: 100%;
 }
 
 .First-chart-filters-holder {
@@ -123,12 +170,12 @@ html {
 }
 
 .First-chart-filter {
-  background: #fff;
-  color: #333;
-  width: 30%;
+  background: #173e43;
+  color: #fff;
+  width: max-content;
   height: 3rem;
   border: 0;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 4px;
   font-family: "Raleway", sans-serif;
   -webkit-transition: 0.6s;
@@ -139,6 +186,7 @@ html {
   appearance: none;
   text-align: center;
   align-items: center;
+  padding: 0.5rem 1.5rem;
 }
 
 .First-chart-filter option {
@@ -157,47 +205,14 @@ html {
   outline: 0;
 }
 
-.First-chart-filter:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0.5;
-  -webkit-filter: blur(30px);
-  filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
-.First-chart-filter:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  left: 30px;
-  top: 0;
-  opacity: 0;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
 .First-chart-filter:hover {
-  background: #333;
+  background: #173e43;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
 
-.First-chart-filter span {
-}
+.First-chart-filter span {}
 
 .First-chart-figure-container {
   display: flex;
@@ -211,7 +226,6 @@ html {
   width: 92%;
   margin: auto;
   flex-direction: column;
-  margin-bottom: 2rem;
   margin-left: 0;
 }
 
@@ -219,6 +233,13 @@ html {
   display: flex;
   width: 100%;
   margin: auto;
+}
+
+.First-chart-data-container-ar {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: row-reverse;
 }
 
 .first-chart-gender-title {
@@ -229,6 +250,19 @@ html {
 }
 
 .first-chart-gender-title h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
+
+.first-chart-gender-title-ar {
+  width: 78%;
+  align-self: center;
+  word-wrap: break-word;
+  text-align: right;
+}
+
+.first-chart-gender-title-ar h3 {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
@@ -296,8 +330,7 @@ html {
   }
 }
 
-.front,
-.back {
+.front, .back {
   transition: all 0.5s linear;
 }
 
@@ -331,6 +364,19 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+  .Achart-holder {
+    background-color: rgba(221, 223, 212, 0.3);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .footer {
+    height: 10rem;
+    padding-bottom: 3rem;
+  }
+  .footer_credit a {
+    margin: 0 0.5rem;
+  }
   .main-buttons:hover {
     cursor: pointer;
     animation-name: expand;
@@ -342,15 +388,18 @@ html {
     width: 8rem;
     height: 8rem;
   }
-  .First-chart-container {
-    margin-top: 2rem;
-  }
   .header-image {
     width: 40%;
   }
   .First-chart-filters-holder {
     width: 53%;
     margin-right: 24%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .First-chart-filter {
+    width: 30%;
+    font-size: 1.3rem;
   }
   .card {
     height: 5rem;
@@ -375,6 +424,10 @@ html {
   .main-buttons-container {
     margin: 3rem 2rem;
   }
+  .First-chart-holder {
+    width: 75%;
+    background-color: rgba(221, 223, 212, 0);
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -387,6 +440,7 @@ html {
   stroke-width: 2px;
 }
 */
+
 polyline {
   opacity: 0.3;
   stroke: black;

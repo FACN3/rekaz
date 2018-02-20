@@ -10,38 +10,30 @@ class ListButtons extends React.Component {
       lists: [
         [
           {
-            text: "Fuck it will be",
             link: 1,
             image: "../../public/assets/stethoscope.png"
           }, {
-            text: "Health Behavior",
             link: 2,
             image: "../../public/assets/heart.png"
           }, {
-            text: "Health Literacy",
             link: 3,
             image: "../../public/assets/Litracy.png"
           }, {
-            text: "Health Service",
             link: 4,
             image: "../../public/assets/charity.png"
           }
         ],
         [
           {
-            text: "Perodic Checkups",
             link: "perodic",
             image: "../../public/assets/medical-checkup.png"
           }, {
-            text: "Smoking",
             link: "smoking",
             image: "../../public/assets/smoke-512.ico"
           }, {
-            text: "Physical Activity",
             link: "activity",
             image: "../../public/assets/physical-activity.png"
           }, {
-            text: "Food and Nutrition",
             link: "food",
             image: "../../public/assets/nutrition.png"
           }

@@ -14,10 +14,20 @@ class Counter extends Component {
   componentDidMount() {
     const width = window.outerWidth;
     const svg = d3.select(".counter" + this.props.position);
-    const svgWidth = width * 0.25;
-    const svgHeight = width * 0.25;
+    let svgWidth = 0;
+    let svgHeight = 0;
+    let radius = 0;
+    if(width < 1000){
+      svgWidth = width * 0.25;
+      svgHeight = width * 0.25;
+      radius = width / 10;
+    }else{
+      svgWidth = width * 0.125;
+      svgHeight = width * 0.125;
+      radius = width/20;
+    }
+
     svg.attr("width", svgWidth).attr("height", svgHeight);
-    let radius = width / 10;
     svg
       .selectAll("g")
       .data(this.counterCirclesArray)
@@ -30,7 +40,7 @@ class Counter extends Component {
       .attr("r", radius)
       .attr("cx", 0)
       .attr("cy", 0)
-      .attr("fill", "lightgreen");
+      .attr("fill", "#fae596");
 
     svg
       .selectAll("g")
