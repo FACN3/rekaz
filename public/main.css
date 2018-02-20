@@ -213,7 +213,12 @@ html {
   width: 100%;
   margin: auto;
 }
-
+.First-chart-data-container-ar {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: row-reverse;
+}
 .first-chart-gender-title {
   width: 78%;
   align-self: center;
@@ -226,7 +231,17 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
-
+.first-chart-gender-title-ar{
+  width: 78%;
+  align-self: center;
+  word-wrap: break-word;
+  text-align: right;
+}
+.first-chart-gender-title-ar h3 {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+}
 .first-chart-counters {
   width: 24%;
   align-self: center;

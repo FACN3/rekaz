@@ -72,6 +72,7 @@ class FirstChart extends Component {
               languages={this.props.languages}
               index={i}
               gender={this.props.languages[sex]}
+              lang={this.props.chosenLang}
               data={
                 this.state.data[this.state.choosen[0]][this.state.choosen[1]][i]
               }

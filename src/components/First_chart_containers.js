@@ -79,10 +79,10 @@ class ChartHolder extends Component {
     }
     return (
       <div className="First-chart-container">
-        <div className="first-chart-gender-title">
+        <div className={this.props.lang=='ar'?"first-chart-gender-title-ar":"first-chart-gender-title"}>
           <h3>{this.props.gender}</h3>
         </div>
-        <div className="First-chart-data-container">
+        <div className={this.props.lang=='ar'?"First-chart-data-container-ar":"First-chart-data-container"}>
           <div className="First-chart-figure-container">
             {firstChart.map((id, i) => {
               return <Figure key={id} flipped={this.state.flipps[i]} id={id} />;

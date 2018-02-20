@@ -7,14 +7,14 @@ import chart04Data from "./chart_04/data";
 
 const SmokingPage = (props) => {
   return (<div>
-    <Navbar changeLanguage={props.changeLanguage} />
+    <Navbar changeLanguage={props.changeLanguage} chosen={props.chosen} />
     <div className="header">
       <img className="header-image" src="public/assets/logo.png" alt="Galille society logo"/>
     </div>
     <h1>{props.languages.somkingTitle}</h1>
     <div className="charts">
       <div className="Achart-holder">
-        <FirstChart languages={props.languages}/>
+        <FirstChart languages={props.languages} chosenLang={props.chosen}/>
       </div>
       <h2>{props.languages.chartDefault}</h2>
       <div className="Achart-holder">

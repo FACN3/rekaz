@@ -3,17 +3,21 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import LandingPage from "./Landing_page";
 import SmokingPage from "./Smoking_page";
 import languages from "../languages.js";
-console.log(languages);
 
 class App extends React.Component {
 
    constructor(props){
      super(props);
-     this.state=({language:"en"})
+     if(localStorage.getItem("webLang")){
+       this.state=({language:localStorage.getItem("webLang")});
+     }else{
+       this.state=({language:"en"});
+     }
      this.changeLanguage=this.changeLanguage.bind(this);
    }
 
    changeLanguage(e){
+     localStorage.setItem("webLang",e.target.value);
      this.setState({language: e.target.value==="ar"?"ar":"en"})
 
    }
