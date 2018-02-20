@@ -18,15 +18,18 @@ html {
   height: auto;
   margin: auto;
 }
+
 .chartC {
   width: 100%;
   height: 100%;
 }
+
 .charts {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
+
 .first-page-introduction-div {
   display: flex;
   text-align: center;
@@ -109,10 +112,11 @@ html {
 /* First Chart*/
 
 .First-chart-holder {
-  background-color: #9be9d9;
+  background-color: rgba(221, 223, 212, 0.3);
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+  width: 100%;
 }
 
 .First-chart-filters-holder {
@@ -123,12 +127,12 @@ html {
 }
 
 .First-chart-filter {
-  background: #fff;
-  color: #333;
-  width: 30%;
+  background: #173e43;
+  color: #fff;
+  width: max-content;
   height: 3rem;
   border: 0;
-  font-size: 18px;
+  font-size: 1rem;
   border-radius: 4px;
   font-family: "Raleway", sans-serif;
   -webkit-transition: 0.6s;
@@ -139,6 +143,7 @@ html {
   appearance: none;
   text-align: center;
   align-items: center;
+  padding: 0.5rem 1.5rem;
 }
 
 .First-chart-filter option {
@@ -157,47 +162,14 @@ html {
   outline: 0;
 }
 
-.First-chart-filter:before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 0.5;
-  -webkit-filter: blur(30px);
-  filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
-.First-chart-filter:after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  left: 30px;
-  top: 0;
-  opacity: 0;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-  transform: translateX(-100px) skewX(-15deg);
-}
-
 .First-chart-filter:hover {
-  background: #333;
+  background: #173e43;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
 
-.First-chart-filter span {
-}
+.First-chart-filter span {}
 
 .First-chart-figure-container {
   display: flex;
@@ -296,8 +268,7 @@ html {
   }
 }
 
-.front,
-.back {
+.front, .back {
   transition: all 0.5s linear;
 }
 
@@ -331,6 +302,12 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+  .Achart-holder {
+    background-color: rgba(221, 223, 212, 0.3);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+  }
   .main-buttons:hover {
     cursor: pointer;
     animation-name: expand;
@@ -351,6 +328,12 @@ html {
   .First-chart-filters-holder {
     width: 53%;
     margin-right: 24%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .First-chart-filter {
+    width: 30%;
+    font-size: 1.3rem;
   }
   .card {
     height: 5rem;
@@ -375,6 +358,10 @@ html {
   .main-buttons-container {
     margin: 3rem 2rem;
   }
+  .First-chart-holder {
+    width: 75%;
+    background-color: rgba(221, 223, 212, 0);
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -387,6 +374,7 @@ html {
   stroke-width: 2px;
 }
 */
+
 polyline {
   opacity: 0.3;
   stroke: black;
