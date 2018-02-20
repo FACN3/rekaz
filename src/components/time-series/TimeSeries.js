@@ -6,13 +6,21 @@ class TimeSeries extends React.Component{
   }
 
   componentDidMount(){
-    this.myCanvas.height="450";
-    this.myCanvas.width="600";
-    drawTimeSeries(this.myCanvas,this.props.data,2)
+
+    let width = window.innerWidth;
+    let height = 0.7 * width;
+      if(width>1000){
+        width = width * 0.75;
+       height = 0.56 * width;
+      }
+
+    this.myCanvas.height=height;
+    this.myCanvas.width=width;
+    drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female)
   }
 
   componentDidUpdate(){
-    drawTimeSeries(this.myCanvas,this.props.data,2)
+    drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female)
 
   }
 

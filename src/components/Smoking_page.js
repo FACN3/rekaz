@@ -6,7 +6,7 @@ import FourthChartCon from "./chart_04/Fourth_Chart_Con";
 import ThirdChartCon from "./chart_03/Third_Chart_Con";
 import chart05Data from "./chart_05/data";
 import chart04Data from "./chart_04/data";
-
+import TimeSeriesCon from "./time-series/TimeSeriesCon";
 const SmokingPage = props => {
   return (
     <div>
@@ -51,6 +51,11 @@ const SmokingPage = props => {
         <div className="Achart-holder">
           <ThirdChartCon languages={props.languages} />
         </div>
+        <h2>{props.languages.chartDefault}</h2>
+        <div className="Achart-holder">
+          <TimeSeriesCon languages={props.languages} />
+        </div>
+
       </div>
       <Footer />
     </div>
