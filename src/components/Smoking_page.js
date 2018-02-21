@@ -72,7 +72,7 @@ const SmokingPage = props => {
         </div>
 
         <div className="Achart-holder">
-          <FithChartCon
+          <FifthChartCon
             languages={props.languages}
             name="fith"
             data={{
