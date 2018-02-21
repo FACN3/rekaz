@@ -30,7 +30,7 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
     drawPrev(dataNow2.slice(0, last), "#5aad5a");
     drawLine2(dataNow[last - 1][0], dataNow[last - 1][1], counterX, counterY, dataNow2[last - 1][0], dataNow2[last - 1][1], counterX2, counterY2, "#7347E1", "#5aad5a");
 
-    drawLine(dataNow[last - 1][0], 10, counterX, 10, "#000000")
+    drawLine(dataNow[last - 1][0], 50, counterX, 50, "#000000")
 
     if (counterX <= dataNow[last][0]) {
       counterX += cofX;
@@ -51,11 +51,11 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
       drawCircle(points[i][0], points[i][1], "#0000000");
       if (i < points.length - 1) {
         drawLine(points[i][0], (points[i][1]), points[i + 1][0], points[i + 1][1], color)
-        drawLine(points[i][0], 10, points[i + 1][0], 10, "#000000")
+        drawLine(points[i][0], 50, points[i + 1][0], 50, "#000000")
       }
       ctx.font = "20px Arial";
-      ctx.fillText(2004 + (i*2), points[i][0], 410);
-      ctx.fillText(Math.round((points[i][1]/canvas.height)*100), points[i][0], 400 - points[i][1] + 15);
+      ctx.fillText(2004 + (i*2), points[i][0], canvas.height-(canvas.height/13));
+      ctx.fillText(Math.round((points[i][1]/canvas.height)*100), points[i][0], canvas.height - points[i][1] + 15);
 
     }
   }
@@ -63,28 +63,28 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
   function drawLine(x1, y1, x2, y2, color) {
     ctx.beginPath();
     ctx.strokeStyle = color;
-    ctx.moveTo(x2, 400 - y2);
-    ctx.lineTo(x1, 400 - y1);
+    ctx.moveTo(x2, canvas.height - y2);
+    ctx.lineTo(x1, canvas.height - y1);
     ctx.stroke();
   }
   function drawLine2(x1, y1, x2, y2, x12, y12, x22, y22, color, color2) {
     ctx.beginPath();
     ctx.strokeStyle = color;
-    ctx.moveTo(x2, 400 - y2);
-    ctx.lineTo(x1, 400 - y1);
+    ctx.moveTo(x2, canvas.height - y2);
+    ctx.lineTo(x1, canvas.height - y1);
     ctx.stroke();
     ctx.beginPath();
 
     ctx.strokeStyle = color2;
-    ctx.moveTo(x22, 400 - y22);
-    ctx.lineTo(x12, 400 - y12);
+    ctx.moveTo(x22, canvas.height - y22);
+    ctx.lineTo(x12, canvas.height - y12);
 
     ctx.stroke();
   }
   function drawCircle(x, y, color) {
     ctx.beginPath();
     ctx.strokeStyle = ("#000000");
-    ctx.arc(x, 400 - y, 5, 0, 2 * Math.PI);
+    ctx.arc(x, canvas.height - y, 5, 0, 2 * Math.PI);
     ctx.stroke();
 
   }
@@ -114,7 +114,7 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
       newPointsS[i][0] = newPoints[i];
 
       if (count == 2)
-        newPointsS[i][1] = (newPointsS[i][1] / 100) * canvas.height;
+        newPointsS[i][1] = (canvas.height/7)+( (newPointsS[i][1] / 100) * canvas.height);
       }
 
     return newPointsS;
