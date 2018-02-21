@@ -3,10 +3,13 @@ import Chart04 from "./chart_04";
 class FourthChartCon extends React.Component {
   constructor(props) {
     super(props);
-
+    console.log(this.props.data.values);
     this.state = {
       index: 0,
-      data: this.props.data.values
+      data: this.props.data.values.data.age.age,
+      age: "age",
+      income: "income",
+      education: "education"
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -15,17 +18,26 @@ class FourthChartCon extends React.Component {
     switch (e.target.id) {
       case "education":
         this.setState({
-          index: 0
+          age: "age",
+          income: "income",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.education[e.target.value]
         }); //Fix
         break;
       case "age":
         this.setState({
-          index: 1
+          education: "education",
+          income: "income",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.age[e.target.value]
         }); //Fix
         break;
       case "income":
         this.setState({
-          index: 2
+          education: "education",
+          age: "age",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.income[e.target.value]
         }); //Fix
         break;
     }
@@ -38,8 +50,10 @@ class FourthChartCon extends React.Component {
         <br/>
         <Chart04
           name={this.props.name}
-          values={this.props.data}
-          data={this.state.data[this.state.index]}
+          values={this.props.data.values}
+          data={this.state.data}
+          labels={this.props.data.labels}
+          colors={this.props.data.colors}
         />
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
@@ -73,9 +87,11 @@ class FourthChartCon extends React.Component {
           >
             <option value="education">{this.props.languages.education}</option>
             <option value="secondary">{this.props.languages.secondary}</option>
-            <option value="highschool">{this.props.languages.highschool}</option>
+            <option value="highschool">
+              {this.props.languages.highschool}
+            </option>
             <option value="bs+">{this.props.languages.bs}</option>
-            </select>
+          </select>
         </div>
       </div>
     );
