@@ -35,7 +35,7 @@ class ThirdChartCon extends React.Component {
   render() {
     return (
       <div className="First-chart-holder">
-        <Chart03 data={dataChart03[this.state.index]} />
+        <Chart03 cigarettes={this.props.languages.cigarettes} data={dataChart03[this.state.index]} />
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
             id="age"
