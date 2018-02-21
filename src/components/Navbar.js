@@ -8,6 +8,11 @@ const Navbar = (props) => {
       <option value="ar">العربية
       </option>
     </select>
+    <div className="fb-share-button"
+  data-href="http://sincere-rock.surge.sh"
+  data-layout="button_count">
+</div>
+
   </div>);
 }
 
