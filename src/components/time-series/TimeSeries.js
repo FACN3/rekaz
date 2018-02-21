@@ -3,6 +3,7 @@ import drawTimeSeries from '../../model/drawTimeSeries';
 class TimeSeries extends React.Component{
   constructor(props){
     super(props)
+    this.current=this.props.male;
   }
 
   componentDidMount(){
@@ -20,7 +21,14 @@ class TimeSeries extends React.Component{
   }
 
   componentDidUpdate(){
+    if(this.current===this.props.male){
     drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female,true)
+}else{
+ this.current=this.props.male;
+  drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female,false)
+
+}
+
 
   }
 
