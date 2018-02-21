@@ -12,12 +12,16 @@ const SmokingPage = (props) => {
     <div className="header">
       <img className="header-image" src="public/assets/logo.png" alt="Galille society logo"/>
     </div>
+    <div className="smoking-page-header">
     <h1>{props.languages.somkingTitle}</h1>
+  </div>
+    <div className="smoking-introduction-div">{props.languages.smokingDiscription}</div>
     <div className="charts">
+      <div className="chart-intro-div"><span>{props.languages.chart1}</span></div>
       <div className="Achart-holder">
         <FirstChart languages={props.languages} chosenLang={props.chosen}/>
       </div>
-      <h2>{props.languages.chartDefault}</h2>
+      <div className="chart-intro-div"><span>{props.languages.chart4}</span></div>
       <div className="Achart-holder">
         <FourthChartCon languages={props.languages} name="fourth" data={{
             values: chart04Data.values,
@@ -25,7 +29,7 @@ const SmokingPage = (props) => {
             labels: props.languages.labels4
           }}/>
       </div>
-      <h2>{props.languages.chartDefault}</h2>
+      <div className="chart-intro-div"><span>{props.languages.chart5}</span></div>
       <div className="Achart-holder">
         <FourthChartCon languages={props.languages} name="fith" data={{
             values: chart05Data.values,

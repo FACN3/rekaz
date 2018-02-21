@@ -38,12 +38,19 @@ html {
   font-size: 1rem;
 }
 
+.first-page-explain-div{
+  width: auto;
+  padding: 3rem 2rem;
+  font-size: 0.6rem;
+  background-color: #F4F6F2;
+}
+
 .footer {
   width: auto;
   height: 7rem;
   background-image: url("./assets/footer-background.png");
   background-repeat: repeat-x;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -74,14 +81,32 @@ html {
 
 .first-page-introduction-div {
   display: flex;
+  flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem 3rem;
-  height: 20rem;
-  font-size: 0.9rem;
+  padding: 3rem 2rem;
+  height: auto;
+  font-size: 0.7rem;
   background-image: url("./assets/introductionBackground.png");
   color: #050b00;
+}
+
+.first-page-introduction-div h2 {
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0;
+}
+
+.first-page-introduction-div div:first-child {
+  margin-right: 0;
+}
+
+.first-page-introduction-div div {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  width: 90%;
 }
 
 .top-level-container {
@@ -140,8 +165,6 @@ html {
   width: max-content;
 }
 
-/*rgba(250, 229, 150, 0.5);*/
-
 .main-buttons-section-header img {
   position: absolute;
   left: 1rem;
@@ -150,6 +173,32 @@ html {
 
 .main-buttons-section-header img:hover {
   cursor: pointer;
+}
+
+.chart-intro-div {
+  position: relative;
+  background: #0E4145;
+  border-radius: .4em;
+  width: 80%;
+  margin: 1rem auto 1rem auto;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.chart-intro-div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #0E4145;
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -15px;
 }
 
 /* First Chart*/
@@ -227,6 +276,7 @@ html {
   margin: auto;
   flex-direction: column;
   margin-left: 0;
+  margin-bottom: 1rem;
 }
 
 .First-chart-data-container {
@@ -271,6 +321,23 @@ html {
 .first-chart-counters {
   width: 24%;
   align-self: center;
+}
+
+.smoking-page-header {
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.1rem;
+  background-image: url("./assets/smoking-page-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.smoking-introduction-div {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: rgba(0, 192, 142, 0.1);
+  width: 75%;
+  margin: 1rem auto;
 }
 
 /* Flipping Figure*/
@@ -364,6 +431,35 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+  .first-page-explain-div{
+    width: auto;
+    padding: 5rem 20%;
+    font-size: 0.8rem;
+  }
+  .chart-intro-div {
+    width: 80%;
+    margin: 1rem auto 2rem auto;
+    padding: 2rem 5rem;
+    font-size: 1.6rem;
+  }
+  .chart-intro-div::after {
+    margin-bottom: -20px;
+  }
+  .first-page-introduction-div {
+    padding: 5rem 20%;
+  }
+  .first-page-explain-div{
+    font-size: 1rem;
+  }
+  .first-page-introduction-div div:first-child {
+    margin-right: 3rem;
+  }
+  .first-page-introduction-div {
+    flex-direction: row;
+  }
+  .first-page-introduction-div div {
+    width: auto;
+  }
   .Achart-holder {
     background-color: rgba(221, 223, 212, 0.3);
     display: flex;
@@ -373,6 +469,7 @@ html {
   .footer {
     height: 10rem;
     padding-bottom: 3rem;
+    background-size: contain;
   }
   .footer_credit a {
     margin: 0 0.5rem;
@@ -419,7 +516,8 @@ html {
     flex-flow: wrap;
   }
   .first-page-introduction-div {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-weight: inherit;
   }
   .main-buttons-container {
     margin: 3rem 2rem;
@@ -427,6 +525,19 @@ html {
   .First-chart-holder {
     width: 75%;
     background-color: rgba(221, 223, 212, 0);
+    height: 40rem;
+  }
+  .smoking-introduction-div {
+    padding: 2rem 10rem;
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  .smoking-page-header {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    background-image: url("./assets/smoking-page-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
