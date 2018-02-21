@@ -184,9 +184,9 @@ class Chart03 extends Component {
       .attr("x", 0 - height / 2.4)
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .style("font-size", "1rem")
+      .style("font-size", "1.3rem")
       .style("font-family", "Roboto")
-      .text("cigarettes per day");
+      .text(this.props.cigarettes);
 
     d3
       .select(".chartBars")
@@ -285,7 +285,14 @@ class Chart03 extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.data);
+    var svg = d3
+      .select(".chartBars")
+
+    svg
+      .select(".yLegend")
+      .text(this.props.cigarettes);
+
+
     change(this.props.data);
   }
 
