@@ -7,10 +7,10 @@ class Chart05 extends Component {
     (this.width = window.innerWidth),
       (this.height = 0.7 * this.width),
       (this.radius = Math.min(this.width, this.height) / 3.5);
-      if(this.width>1000){
-        this.width = this.width * 0.75;
-        this.height = 0.56 * this.width;
-      }
+    if (this.width > 1000) {
+      this.width = this.width * 0.75;
+      this.height = 0.56 * this.width;
+    }
     this.pie = d3 //.layout
       .pie()
       .sort(null)
@@ -27,9 +27,9 @@ class Chart05 extends Component {
       .arc()
       .innerRadius(this.radius * 0.8)
       .outerRadius(this.radius * 0.8);
-    this.labels = this.props.values.labels;
+    this.labels = this.props.labels;
 
-    this.colors = this.props.values.colors;
+    this.colors = this.props.colors;
   }
   compileDataSet(labels, data, colors) {
     return labels.map((label, i) => {
@@ -90,7 +90,7 @@ class Chart05 extends Component {
   }
 
   componentDidUpdate() {
-    this.labels = this.props.values.labels;
+    this.labels = this.props.labels;
 
     //const dataSet1 = compileDataSet(labels, this.props.data, colors);
     //change(dataSet1, false);

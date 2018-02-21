@@ -6,7 +6,10 @@ class FifthChartCon extends React.Component {
 
     this.state = {
       index: 0,
-      data: this.props.data.values
+      data: this.props.data.values.data.age.age,
+      age: "age",
+      income: "income",
+      education: "education"
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -15,17 +18,26 @@ class FifthChartCon extends React.Component {
     switch (e.target.id) {
       case "education":
         this.setState({
-          index: 0
+          age: "age",
+          income: "income",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.education[e.target.value]
         }); //Fix
         break;
       case "age":
         this.setState({
-          index: 1
+          education: "education",
+          income: "income",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.age[e.target.value]
         }); //Fix
         break;
       case "income":
         this.setState({
-          index: 2
+          education: "education",
+          age: "age",
+          [e.target.id]: e.target.value,
+          data: this.props.data.values.data.income[e.target.value]
         }); //Fix
         break;
     }
@@ -35,16 +47,22 @@ class FifthChartCon extends React.Component {
     return (
       <div className="First-chart-holder">
         <h1>{this.props.languages.title5}</h1>
-        <br/>
+        <br />
         <Chart05
           name={this.props.name}
-          values={this.props.data}
-          data={this.state.data[this.state.index]}
+          values={this.props.data.values}
+          data={this.state.data}
+          labels={this.props.data.labels}
+          colors={this.props.data.colors}
         />
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
             id="age"
-            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
+            className={
+              this.props.chosenLang == "ar"
+                ? "First-chart-filter-ar"
+                : "First-chart-filter"
+            }
             onChange={this.handleChange}
             value={this.state.age}
           >
@@ -56,7 +74,11 @@ class FifthChartCon extends React.Component {
           </select>
           <select
             id="income"
-            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
+            className={
+              this.props.chosenLang == "ar"
+                ? "First-chart-filter-ar"
+                : "First-chart-filter"
+            }
             onChange={this.handleChange}
             value={this.state.income}
           >
@@ -67,15 +89,21 @@ class FifthChartCon extends React.Component {
           </select>
           <select
             id="education"
-            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
+            className={
+              this.props.chosenLang == "ar"
+                ? "First-chart-filter-ar"
+                : "First-chart-filter"
+            }
             onChange={this.handleChange}
             value={this.state.education}
           >
             <option value="education">{this.props.languages.education}</option>
             <option value="secondary">{this.props.languages.secondary}</option>
-            <option value="highschool">{this.props.languages.highschool}</option>
+            <option value="highschool">
+              {this.props.languages.highschool}
+            </option>
             <option value="bs+">{this.props.languages.bs}</option>
-            </select>
+          </select>
         </div>
       </div>
     );

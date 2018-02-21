@@ -210,7 +210,7 @@ class Chart03 extends Component {
       })
       .attr("height", height / 5)
       .attr("width", 0.4 * width)
-      .style("fill", "lightgrey"); //"#1ebbd7");
+      .style("fill", "#fae596"); //"#1ebbd7");
 
     infoBox
       .append("text")
@@ -218,12 +218,12 @@ class Chart03 extends Component {
       .text(function(d) {
         return d;
       })
-      .attr("fill", "red")
+      .attr("fill", "black")
       .attr("y", function(d, i) {
         return infoBoxY[i] + 0.3 * y.bandwidth();
       })
       .attr("x", 0.01 * width)
-      .style("font-size", "0.9rem")
+      .style("font-size", "0.8rem")
       .style("font-weight", "bold");
 
     infoBox
@@ -232,7 +232,7 @@ class Chart03 extends Component {
       .text(function(d) {
         return `week: `;
       })
-      .attr("fill", "red")
+      .attr("fill", "black")
       .attr("y", function(d, i) {
         return infoBoxY[i] + 0.8 * y.bandwidth();
       })
@@ -243,7 +243,7 @@ class Chart03 extends Component {
       .text(function(d, i) {
         return packCostWeek[i];
       })
-      .style("fill", "blue");
+      .style("fill", "#1e453e");
 
     infoBox
       .append("text")
@@ -251,7 +251,7 @@ class Chart03 extends Component {
       .text(function(d) {
         return `month: `;
       })
-      .attr("fill", "red")
+      .attr("fill", "black")
       .attr("y", function(d, i) {
         return infoBoxY[i] + 1.2 * y.bandwidth();
       })
@@ -262,7 +262,7 @@ class Chart03 extends Component {
       .text(function(d, i) {
         return d3.format(",")(packCostMonth[i]);
       })
-      .style("fill", "blue");
+      .style("fill", "#1e453e");
 
     infoBox
       .append("text")
@@ -270,7 +270,7 @@ class Chart03 extends Component {
       .text(function(d) {
         return `year:`;
       })
-      .attr("fill", "red")
+      .attr("fill", "black")
       .attr("y", function(d, i) {
         return infoBoxY[i] + 1.6 * y.bandwidth();
       })
@@ -281,7 +281,7 @@ class Chart03 extends Component {
       .text(function(d, i) {
         return d3.format(",")(packCostYear[i]);
       })
-      .style("fill", "blue");
+      .style("fill", "#1e453e");
   }
 
   componentDidUpdate() {
