@@ -34,6 +34,7 @@ class TimeSeriesCon extends React.Component {
  render(){
    return (
      <div className="First-chart-holder">
+       <h1>Smoking Trends</h1>
        <TimeSeries male={this.props.languages.male} female={this.props.languages.female} data={TimeSeriesData[this.state.selection]}/>
        <div className="First-chart-filters-holder sel sel--black-panther">
          <select

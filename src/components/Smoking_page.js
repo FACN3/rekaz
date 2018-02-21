@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FirstChart from "./First_chart";
 import FourthChartCon from "./chart_04/Fourth_Chart_Con";
+import FifthChartCon from "./chart_05/Fifth_Chart_Con";
 import ThirdChartCon from "./chart_03/Third_Chart_Con";
 import chart05Data from "./chart_05/data";
 import chart04Data from "./chart_04/data";
@@ -41,7 +42,7 @@ const SmokingPage = (props) => {
       </div>
       <div className="chart-intro-div"><span>{props.languages.chart5}</span></div>
       <div className="Achart-holder">
-        <FourthChartCon languages={props.languages} name="fith" data={{
+        <FifthChartCon languages={props.languages} name="fith" data={{
             values: chart05Data.values,
             colors: chart05Data.colors,
             labels: props.languages.labels5

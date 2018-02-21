@@ -11,7 +11,7 @@ class TimeSeries extends React.Component{
     let height = 0.7 * width;
       if(width>1000){
         width = width * 0.75;
-       height = 0.56 * width;
+       height = 0.4 * width;
       }
 
     this.myCanvas.height=height;
