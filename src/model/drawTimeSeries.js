@@ -1,4 +1,4 @@
-function drawTimeSeries(canvas, dataOrg, count, male, female) {
+function drawTimeSeries(canvas, dataOrg, count, male, female,cond) {
 
   var dataAll = scaleIt(dataOrg, canvas.width, count);
   const ctx = canvas.getContext("2d");
@@ -40,7 +40,7 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
 
     } else {
       window.clearInterval(g);
-      drawTimeSeries(canvas, dataAll, count + 1, male, female);
+      drawTimeSeries(canvas, dataAll, count + 1, male, female,cond);
     }
 
   }, Math.sin((Math.PI / 100) * (counterX - ((last - 1) * 100))) * 10);
@@ -113,7 +113,7 @@ function drawTimeSeries(canvas, dataOrg, count, male, female) {
 
       newPointsS[i][0] = newPoints[i];
 
-      if (count == 2)
+      if (count == 2 && cond)
         newPointsS[i][1] = (canvas.height/7)+( (newPointsS[i][1] / 100) * canvas.height);
       }
 

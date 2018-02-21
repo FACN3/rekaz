@@ -34,7 +34,7 @@ class FourthChartCon extends React.Component {
   render() {
     return (
       <div className="First-chart-holder">
-        <h1>Factors that prevent men from quitting smoking</h1>
+        <h1>{this.props.languages.title4}</h1>
         <br/>
         <Chart04
           name={this.props.name}

@@ -66,7 +66,7 @@ class FirstChart extends Component {
   render() {
     return (
       <div className="First-chart-holder first-chart-div">
-        <h1>Smoking in Palestine (2015)</h1>
+        <h1>{this.props.languages.title1}</h1>
         <br/>
         {gender.map((sex, i) => {
           return (

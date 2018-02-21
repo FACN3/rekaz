@@ -31,13 +31,18 @@ const languages = {
     "chart5": "Finally, what are the reasons that can help you quit?",
     labels4: ["who to ask", "pressure", "health solutions", "no support", "will power"],
     labels5: ["religion", "law ban", "family", "economics", "cost", "health"],
-    "cigarettes":"Cigarettes per day"
+    "cigarettes":"Cigarettes per day",
+    "title1":"Smoking among Israeli Palestinians (2015)",
+    "title2":"Smoking Trends",
+    "title3":"Cigarettes Consumption Per Day",
+    "title4":"Factors that prevent men from quitting smoking",
+    "title5":"Reasons for quitting smoking"
 
   },
   ar: {
     title: "مرحباَ",
-    description1:"",
-    description2:"",
+    description1:"مشروع ركاز هو مشروع لعرض البيانات التي تم جمعها من خلال تعبئة استبنيانات التي اشرف عليها مركز ركاز التابع لجمعية الجليل , يركز مشروع على عرض بيانات بطريقة ممتعة بهدف زيادة الوعي بل الوسط العربي عن قضايا المهمة مثل  الصحة والبيئية.",
+    description2:"جميع المعلومات التي تم جمعها تم جمعها بدقة وبعاناية تحت إشراف مركز ركاز التابع لجمعية الجليل.",
     content: "المحتويات",
     "ButtonsContent": [
       "الوضع الصحي", "السلوك الصحي", "الثقافة الصحية", "الخدمة الصحية"
@@ -66,8 +71,12 @@ const languages = {
     "chart5":"واخيراّ يوضح الرسم البياني التالي العوامل التي تساعد على اقلاع  عن التدخين ",
     labels4: ["لمن التوجه", "ضغط", "حلول صحية", "لا يوجد دعم", "الإرادة غير كافية"],
     labels5: ["اسباب دينية", "قوانين المنع", "العائلة", "الوضع القتصادي", "الكلفة", "صحة"],
-    "cigarettes":"عدد السجائر المستهلكة بومياً"
-
+    "cigarettes":"عدد السجائر المستهلكة بومياً",
+    "title1":"نسبة المدخنين بل الوسط العربي حسب احصائية 2015",
+    "title2":"تطور نسبة التدخين عبر الزمن",
+    "title3":"إستهلاك السجائر اليومي",
+    "title4":"العوامل التي تمنع المدخنين عن الاقلاع",
+    "title5":"العوامل التي تؤدي  الى إقلاع عن التدخين"
 
   }
 };

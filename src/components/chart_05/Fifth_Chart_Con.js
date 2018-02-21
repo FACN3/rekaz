@@ -34,7 +34,7 @@ class FifthChartCon extends React.Component {
   render() {
     return (
       <div className="First-chart-holder">
-        <h1>Reasons for quitting smoking</h1>
+        <h1>{this.props.languages.title5}</h1>
         <br/>
         <Chart05
           name={this.props.name}
