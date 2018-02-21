@@ -238,6 +238,38 @@ html {
   padding: 0.5rem 1.5rem;
 }
 
+.First-chart-filter-ar {
+  background: #173e43;
+  color: #fff;
+  width: max-content;
+  height: 3rem;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align: right;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+}
+
+.First-chart-filter-ar option {
+  display: list-item;
+  font-family: "Quicksand";
+  font-size: 1.5em;
+  color: #838e95;
+  padding: 0.5em 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .First-chart-filter option {
   display: list-item;
   font-family: "Quicksand";
@@ -260,8 +292,12 @@ html {
   cursor: pointer;
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
-
-.First-chart-filter span {}
+.First-chart-filter-ar:hover {
+  background: #173e43;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
+}
 
 .First-chart-figure-container {
   display: flex;
@@ -495,6 +531,10 @@ html {
     margin-bottom: 0;
   }
   .First-chart-filter {
+    width: 30%;
+    font-size: 1.3rem;
+  }
+  .First-chart-filter-ar {
     width: 30%;
     font-size: 1.3rem;
   }

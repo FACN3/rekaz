@@ -1,84 +1,41 @@
-import React, { Component } from "react";
-import FirstChartContainers from "./First_chart_containers";
-
-const gender = ["female", "male", "both"];
-
-class FirstChart extends Component {
+import React from "react";
+import Chart03 from "./chart_03";
+import dataChart03 from "./data";
+class ThirdChartCon extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      age: "age",
-      income: "income",
-      education: "education",
-      data: {
-        age: {
-          age: [9, 50, 30],
-          "18-29": [12, 45, 29],
-          "30-44": [7, 60, 33],
-          "45-59": [5, 55, 30],
-          "60+": [2, 40, 20]
-        },
-        income: {
-          income: [9, 50, 30],
-          low: [9, 43, 26],
-          meduim: [10, 50, 30],
-          high: [12, 60, 37]
-        },
-        education: {
-          education: [9, 50, 30],
-          secondary: [7, 62, 35],
-          highschool: [5, 55, 30],
-          "bs+": [4, 50, 27]
-        }
-      },
-      choosen: ["age", "age"]
+      index: 0,
+      data: "sd"
     };
     this.handleChange = this.handleChange.bind(this);
   }
+
   handleChange(e) {
     switch (e.target.id) {
       case "education":
         this.setState({
-          age: "age",
-          income: "income",
-          [e.target.id]: e.target.value,
-          choosen: [e.target.id, e.target.value]
+          index: 0
         }); //Fix
         break;
       case "age":
         this.setState({
-          education: "education",
-          income: "income",
-          [e.target.id]: e.target.value,
-          choosen: [e.target.id, e.target.value]
+          index: 1
         }); //Fix
         break;
       case "income":
         this.setState({
-          age: "age",
-          education: "education",
-          [e.target.id]: e.target.value,
-          choosen: [e.target.id, e.target.value]
+          index: 2
         }); //Fix
         break;
     }
   }
+
   render() {
     return (
       <div className="First-chart-holder">
-        {gender.map((sex, i) => {
-          return (
-            <FirstChartContainers
-              languages={this.props.languages}
-              index={i}
-              gender={this.props.languages[sex]}
-              lang={this.props.chosenLang}
-              data={
-                this.state.data[this.state.choosen[0]][this.state.choosen[1]][i]
-              }
-            />
-          );
-        })}
+        <Chart03 data={dataChart03[this.state.index]} />
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
             id="age"
@@ -111,7 +68,9 @@ class FirstChart extends Component {
           >
             <option value="education">{this.props.languages.education}</option>
             <option value="secondary">{this.props.languages.secondary}</option>
-            <option value="highschool">{this.props.languages.highschool}</option>
+            <option value="highschool">
+              {this.props.languages.highschool}
+            </option>
             <option value="bs+">{this.props.languages.bs}</option>
           </select>
         </div>
@@ -119,5 +78,4 @@ class FirstChart extends Component {
     );
   }
 }
-
-export default FirstChart;
+export default ThirdChartCon;
