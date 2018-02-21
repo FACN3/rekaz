@@ -298,7 +298,14 @@ html {
   cursor: pointer;
   box-shadow: 0 2px 0 #000, 0 2px 0px 2px #000;
 }
-
+.right-div{
+  display: none;
+  position: absolute;
+}
+.left-div{
+  display: none;
+  position: absolute;
+}
 .First-chart-figure-container {
   display: flex;
   flex-wrap: wrap;
@@ -467,6 +474,27 @@ html {
 }
 
 @media only screen and (min-width: 710px) {
+  .right-div{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 120%;
+  }
+  .left-div{
+    display:block;
+    position: absolute;
+    z-index: 1;
+    left:0;
+    top: 120%;
+
+  }
+  .right-div,.left-div{
+    cursor: pointer;
+  }
+  .left-div img ,.right-div img{
+    width: 35%;
+  }
   .first-page-explain-div{
     width: auto;
     padding: 5rem 20%;
@@ -565,7 +593,7 @@ html {
   .First-chart-holder {
     width: 75%;
     background-color: rgba(221, 223, 212, 0);
-    height: 40rem;
+    height: auto;
   }
   .smoking-introduction-div {
     padding: 2rem 10rem;
