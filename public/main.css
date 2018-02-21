@@ -26,7 +26,8 @@ html {
   background-color: #173e43;
   padding: 0.5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .navbar-only-input {
@@ -221,7 +222,7 @@ html {
 .First-chart-filter {
   background: #173e43;
   color: #fff;
-  width: max-content;
+  width: 30%;
   height: 3rem;
   border: 0;
   font-size: 1rem;
@@ -241,7 +242,7 @@ html {
 .First-chart-filter-ar {
   background: #173e43;
   color: #fff;
-  width: max-content;
+  width: 30%;
   height: 3rem;
   border: 0;
   font-size: 1rem;
@@ -465,12 +466,26 @@ html {
     height: 8rem;
   }
 }
-
+.First-chart-holder h1{
+  font-size: 1.5rem
+}
+.first-chart-div{
+  height: auto;
+}
 @media only screen and (min-width: 710px) {
+  .First-chart-filter {
+    width: max-content;
+  }
+  .First-chart-holder h1{
+    font-size: 2rem;
+  }
   .first-page-explain-div{
     width: auto;
     padding: 5rem 20%;
     font-size: 0.8rem;
+  }
+  .first-chart-div{
+    height: 40rem;
   }
   .chart-intro-div {
     width: 80%;
@@ -535,7 +550,7 @@ html {
     font-size: 1.3rem;
   }
   .First-chart-filter-ar {
-    width: 30%;
+    width: max-content;
     font-size: 1.3rem;
   }
   .card {
@@ -565,7 +580,7 @@ html {
   .First-chart-holder {
     width: 75%;
     background-color: rgba(221, 223, 212, 0);
-    height: 40rem;
+    height: auto;
   }
   .smoking-introduction-div {
     padding: 2rem 10rem;
