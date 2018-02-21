@@ -42,7 +42,7 @@ class FourthChartCon extends React.Component {
         <div className="First-chart-filters-holder sel sel--black-panther">
           <select
             id="age"
-            className="First-chart-filter"
+            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
             onChange={this.handleChange}
             value={this.state.age}
           >
@@ -54,7 +54,7 @@ class FourthChartCon extends React.Component {
           </select>
           <select
             id="income"
-            className="First-chart-filter"
+            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
             onChange={this.handleChange}
             value={this.state.income}
           >
@@ -65,7 +65,7 @@ class FourthChartCon extends React.Component {
           </select>
           <select
             id="education"
-            className="First-chart-filter"
+            className={this.props.chosenLang=="ar"?"First-chart-filter-ar":"First-chart-filter"}
             onChange={this.handleChange}
             value={this.state.education}
           >
