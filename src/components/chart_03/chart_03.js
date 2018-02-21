@@ -35,13 +35,29 @@ class Chart03 extends Component {
     const packCostWeek = [368, 245, 126];
 
     //--------svg size config -------
-    let width = window.innerWidth * 0.7,
-      height = 1.2 * width,
-      margin = { top: 20, right: 30, bottom: 20, left: 0.1 * width };
-
+    let width = 0;
+    let height = 0;
+    let chartWidth = 0;
+    let infoBoxPos = 0;
+    if (window.innerWidth > window.innerHeight) {
+      //desktop screen
+      width = window.innerWidth * 0.4;
+      height = width;
+      chartWidth = 1.2 * width;
+      infoBoxPos = 1.3 * width;
+    } else {
+      //mobile phone screen
+      width = window.innerWidth * 0.7;
+      height = 1.2 * width;
+      chartWidth = width / 1.3;
+      infoBoxPos = width;
+    }
+    let margin = { top: 20, right: 30, bottom: 20, left: 0.1 * width };
+    console.log("width", width);
+    console.log("height", height);
     //----------chart config------------
     let chartHeight = height / 1.3;
-    let chartWidth = width / 1.3;
+
     var formatPercent = d3.format(".3s");
     let infoBoxY = [];
 
@@ -176,7 +192,7 @@ class Chart03 extends Component {
       .select(".chartBars")
       .append("g")
       .attr("class", "cigCostCon")
-      .attr("transform", "translate(" + width + "," + 0.03 * height + ")");
+      .attr("transform", "translate(" + infoBoxPos + "," + 0.03 * height + ")");
 
     let infoBox = d3
       .select(".cigCostCon")
