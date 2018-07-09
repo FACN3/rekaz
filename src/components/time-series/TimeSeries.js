@@ -17,15 +17,16 @@ class TimeSeries extends React.Component{
 
     this.myCanvas.height=height;
     this.myCanvas.width=width;
+console.log("erer")
     drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female,true)
   }
 
   componentDidUpdate(){
-    if(this.current===this.props.male){
-    drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female,true)
+     if(this.props.male===this.current){
+    drawTimeSeries(this.myCanvas,this.props.data.slice(),2,this.props.male,this.props.female,true)
 }else{
- this.current=this.props.male;
-  drawTimeSeries(this.myCanvas,this.props.data,2,this.props.male,this.props.female,false)
+  this.current=this.props.male;
+  drawTimeSeries(this.myCanvas,this.props.data.slice(),2,this.props.male,this.props.female,true)
 
 }
 
